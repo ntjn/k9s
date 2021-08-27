@@ -111,6 +111,7 @@ func (x *Xray) bindKeys() {
 	x.Actions().Add(ui.KeyActions{
 		ui.KeySlash:     ui.NewSharedKeyAction("Filter Mode", x.activateCmd, false),
 		tcell.KeyEscape: ui.NewSharedKeyAction("Filter Reset", x.resetCmd, false),
+		tcell.Key(113): ui.NewSharedKeyAction("Filter Reset", x.resetCmd, false),
 		tcell.KeyEnter:  ui.NewKeyAction("Goto", x.gotoCmd, true),
 	})
 }

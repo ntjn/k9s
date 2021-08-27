@@ -138,6 +138,10 @@ func (p *Prompt) keyboard(evt *tcell.EventKey) *tcell.EventKey {
 	case tcell.KeyEscape:
 		p.model.ClearText(true)
 		p.model.SetActive(false)
+    // Q
+	case tcell.Key(113):
+		p.model.ClearText(true)
+		p.model.SetActive(false)
 	case tcell.KeyEnter, tcell.KeyCtrlE:
 		p.model.SetText(p.model.GetText())
 		p.model.SetActive(false)

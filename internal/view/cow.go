@@ -86,6 +86,7 @@ func cowTalk(says string, w int) string {
 func (c *Cow) bindKeys() {
 	c.actions.Set(ui.KeyActions{
 		tcell.KeyEscape: ui.NewKeyAction("Back", c.resetCmd, false),
+		tcell.Key(113): ui.NewKeyAction("Back", c.resetCmd, false),
 	})
 }
 
